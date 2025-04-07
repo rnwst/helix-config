@@ -1,0 +1,16 @@
+[[language]]
+name = "lua"
+indent = {tab-width = 3, unit = "   "}
+formatter = {command = "stylua", args = ["-"]}
+
+[[language]]
+name = "markdown"
+soft-wrap = {enable = true, max-wrap = 40}
+
+[[language]]
+name = "xml"
+language-servers = ["lemminx"]
+file-types = ["xml", "openxml", {glob = "*.xml.rels"}, {glob = ".rels"}]
+
+[language-server.lemminx]
+command = "lemminx"
