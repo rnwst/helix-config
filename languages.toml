@@ -2,7 +2,7 @@
 name = "lua"
 indent = {tab-width = 3, unit = "   "}
 formatter = {command = "stylua", args = ["-", "--syntax", "Lua54", "--indent-type", "Spaces", "--indent-width", "3", "--quote-style", "AutoPreferSingle", "--call-parentheses", "NoSingleTable", "--collapse-simple-statement", "Always"]}
-file-types = ["lua", {glob = ".busted"}, {glob = ".luacov"}]
+file-types = ["lua", {glob = ".busted"}, {glob = ".luacov"}, {glob = "*.rockspec"}]
 
 [[language]]
 name = "markdown"
