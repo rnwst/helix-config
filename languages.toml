@@ -38,3 +38,25 @@ language-servers = ["pyright"]
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
+
+[[language]]
+name = "bibtex"
+auto-format = false
+
+[[language]]
+name = "json"
+auto-format = false
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = false
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = false
+
+[[language]]
+name = "html"
+auto-format = false  # Auto-format causes problems in Hugo templates.
