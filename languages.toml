@@ -60,3 +60,7 @@ auto-format = false
 [[language]]
 name = "html"
 auto-format = false  # Auto-format causes problems in Hugo templates.
+
+[[language]]
+name = "css"
+auto-format = false # It's annoying. Maybe I'll enable it later once I've found a good CSS formatter.
