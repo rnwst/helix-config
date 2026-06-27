@@ -3,6 +3,7 @@ theme = "dark_high_contrast"
 [editor]
 bufferline = "always"
 line-number = "relative"
+auto-pairs = false
 
 [editor.whitespace]
 render = "all"
