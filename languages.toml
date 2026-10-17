@@ -14,8 +14,9 @@ language-servers = [ "jetls" ]
 formatter = { command = "jlfmt", args = ["-"] }
 auto-format = true
 
-[language-server]
-jetls = { command = "jetls", args = ["serve"] }
+[language-server.jetls]
+command = "jetls"
+args = ["serve"]
 
 [[language]]
 name = "xml"
@@ -63,4 +64,13 @@ auto-format = false  # Auto-format causes problems in Hugo templates.
 
 [[language]]
 name = "css"
-auto-format = false # It's annoying. Maybe I'll enable it later once I've found a good CSS formatter.
+auto-format = false  # It's annoying. Maybe I'll enable it later once I've found a good CSS formatter.
+
+[language-server.postgres-language-server]
+command = "postgres-language-server"
+args = ["lsp-proxy"]
+
+[[language]]
+name = "sql"
+language-servers = ["postgres-language-server"]
+roots = ["postgres-language-server.jsonc"]
